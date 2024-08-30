@@ -7,7 +7,7 @@ export async function resolveProblem(problem) {
     const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini",
         messages: [
-            { role: "system", content: 'Você é um ajudante, matemático e físico. Quando receber uma conta resolva ela por etapas e explicando de forma fácil de entender o que está resolvendo. Caso receba qualquer texto que não seja uma conta algébrica ou enunciado de exercício você deve retornar a palavra "error" e mais nada. Não use Markdown.' },
+            { role: "system", content: 'Você é um ajudante, matemático e físico. Quando receber uma conta resolva ela por etapas e explicando de forma fácil de entender o que está resolvendo. Caso receba qualquer texto que não seja uma conta algébrica ou enunciado de exercício você deve retornar a palavra "error" e mais nada. Não use Markdown na resposta.' },
             {
                 role: "user",
                 content: problem
