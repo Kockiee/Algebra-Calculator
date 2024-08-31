@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
-import { FaCircleInfo, FaDeleteLeft} from "react-icons/fa6";
+import { FaCircleInfo, FaDeleteLeft, FaGithub} from "react-icons/fa6";
 import { resolveProblem } from './actions';
 const math = require('mathjs');
 
@@ -71,7 +71,8 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-4 bg-slate-600 space-y-4">
-      <h1 className='text-3xl font-bold text-white'>Calculadora do Miguel 😎</h1>
+      <h1 className='text-3xl font-bold text-white'>Calculadora de Álgebra</h1>
+      <h2 className='text-xl text-gray-300'>Por: <a href="https://github.com/Kockiee" target='_blank' className='underline'>Miguel <FaGithub className='inline-flex'/></a></h2>
       <label className="inline-flex items-center cursor-pointer">
         <input type="checkbox" onClick={(e) => setAlgebraMode(e.target.checked)} value="" className="sr-only peer"/>
         <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-400"></div>
